@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2017 Honda Accord — Owner’s Manual</title>
+  <meta name="description" content="View and download the 2017 Honda Accord owner's manual." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Page-local styles; you may move these to styles.css if preferred */
+    .page-wrap { padding: 32px 16px; max-width: 1100px; margin: 0 auto; }
+    .page-header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px; }
+    .page-title { margin:0; font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem); }
+    .back-link { text-decoration:none; padding:8px 12px; border:1px solid var(--card-border); border-radius:10px; color:var(--text); background:var(--surface); }
+
+    /* Responsive PDF frame that keeps a portrait-ish ratio */
+    .pdf-frame-wrap { position: relative; width: 100%; }
+    .pdf-frame-wrap::before { content: ""; display: block; padding-top: 130%; }
+    .pdf-frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 1px solid var(--card-border); border-radius: 12px; background: #111; box-shadow: 0 20px 40px rgba(0,0,0,.35); }
+
+    .download-bar { margin-top: 14px; display:flex; gap:8px; align-items:center; justify-content:flex-end; flex-wrap: wrap; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:12px; font-weight:700; letter-spacing:.2px; border:1px solid transparent; }
+    .btn-ghost { background: transparent; color: var(--text); border-color: var(--card-border); text-decoration:none; }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--accent)); color:#081122; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="logo-wrap" aria-label="2017 Honda Accord">
+      <svg class="logo" viewBox="0 0 260 40" aria-hidden="true" focusable="false">
+        <text x="0" y="28" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="26" fill="currentColor">2017 ACCORD</text>
+      </svg>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="nav-list" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a aria-current="page">Manual</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">🌗</button>
+    </nav>
+  </header>
+
+  <main id="main" class="page-wrap">
+    <div class="page-header">
+      <h1 class="page-title">Owner’s Manual</h1>
+      <a class="back-link" href="index.html">← Back to site</a>
+    </div>
+
+    <!-- Responsive PDF embed (iframe primary; object fallback) -->
+    <div class="pdf-frame-wrap">
+      <iframe class="pdf-frame" title="2017 Accord Owner’s Manual"
+              src="assets/docs/accord_manual.pdf#view=FitH&toolbar=1&navpanes=0"></iframe>
+    </div>
+
+    <div class="download-bar">
+      <a class="btn btn-ghost" href="assets/docs/accord_manual.pdf" download>Download PDF</a>
+      <a class="btn btn-primary" href="assets/docs/accord_manual.pdf" target="_blank" rel="noopener">Open in new tab</a>
+    </div>
+
+    <p class="note" style="margin-top:12px; color: var(--muted);">
+      If the embedded viewer doesn’t load in your browser, use the buttons above to open or download the manual.
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
